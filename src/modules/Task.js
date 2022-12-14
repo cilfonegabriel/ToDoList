@@ -1,9 +1,9 @@
 export default class Task {
-  constructor(description = '', completed = false, index = -1) {
-    this.description = description;
-    this.completed = completed;
-    this.index = index;
-  }
+    constructor(description = '', index = 0) {
+      this.description = description;
+      this.completed = false;
+      this.index = index;
+    }
 
   set description(newDescription) { 
     this.description = newDescription; 
