@@ -1,35 +1,37 @@
 export default class Task {
-    constructor(description = '', index = 0) {
-      this.description = description;
-      this.completed = false;
-      this.index = index;
-    }
-
-  set description(newDescription) { 
-    this.description = newDescription; 
+  constructor(description = '', index = 0) {
+    this.description = description;
+    this.completed = false;
+    this.index = index;
   }
 
-  set completed(newCompleted) { 
-    this.completed = newCompleted; 
+  set setDescription(newDescription = '') {
+    if (!newDescription) return;
+    this.description = newDescription;
   }
 
-  set index(newIndex) { 
-    this.index = newIndex; 
+  set setCompleted(newCompleted) {
+    this.completed = newCompleted;
   }
 
-  get description() { 
+  set setIndex(newIndex = 0) {
+    if (typeof newIndex !== 'number' || newIndex < 0) return;
+    this.index = newIndex;
+  }
+
+  get getDescription() {
     return this.description;
   }
 
-  get completed() { 
-    return this.completed; 
+  get getCompleted() {
+    return this.completed;
   }
 
-  get index() { 
-    return this.index; 
+  get getIndex() {
+    return this.index;
   }
 
-  toggleCompleted() { 
-    this.completed = !this.completed; 
+  toggleCompleted() {
+    this.completed = !this.completed;
   }
 }
