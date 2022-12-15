@@ -107,7 +107,8 @@ body {
   vertical-align: middle;
 }
 
-.task > input {
+
+.checkbox {
   height: 12px;
 }
 
@@ -123,6 +124,7 @@ body {
 .task > span {
   text-align: right;
   padding-right: 5px;
+  cursor: pointer;
 }
 
 .clear-all {
@@ -135,4 +137,8 @@ body {
 
 .completed {
   text-decoration: line-through;
+}
+
+.hidden {
+  display: none;
 }
