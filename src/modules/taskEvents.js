@@ -10,32 +10,33 @@ export default function createTaskDOM(desc) {
     `;
     const taskCheckbox = newTask.children[0];
     taskCheckbox.addEventListener('change', () => {
-    if (taskCheckbox.checked) {
+      if (taskCheckbox.checked) {
         newTask.classList.add('completed');
-    } else {
+      } else {
         newTask.classList.remove('completed');
-    }
+      }
     });
     const newTaskInput = newTask.children[1];
     newTaskInput.addEventListener('focus', () => {
-    newTaskInput.parentElement.classList.toggle('focus');
-    newTaskInput.parentElement.children[3].classList.add('hidden');
-    newTaskInput.parentElement.children[2].classList.remove('hidden');
+      newTaskInput.parentElement.classList.toggle('focus');
+      newTaskInput.parentElement.children[3].classList.add('hidden');
+      newTaskInput.parentElement.children[2].classList.remove('hidden');
     });
     newTaskInput.addEventListener('blur', () => {
-    setTimeout(() => {
+      setTimeout(() => {
         newTaskInput.parentElement.children[3].classList.remove('hidden');
         newTaskInput.parentElement.children[2].classList.add('hidden');
         newTaskInput.parentElement.classList.toggle('focus');
-    }, 100);
+      }, 100);
     });
-
     const trashButton = newTask.children[2];
     trashButton.addEventListener('click', () => {
-    if (trashButton.parentElement.parentElement) {
-        trashButton.parentElement.parentElement.removeChild(trashButton.parentElement);
-    }
+      if (trashButton.parentElement.parentElement) {
+        setTimeout(() => {
+          trashButton.parentElement.parentElement.removeChild(trashButton.parentElement);
+        }, 10);
+      }
     });
-
+  
     return newTask;
-}
+  }
