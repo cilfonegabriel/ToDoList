@@ -26,9 +26,13 @@ export default class Task {
   get getCompleted() {
     return this.completed;
   }
-
+  
   get getIndex() {
     return this.index;
+  }
+
+  isCompleted() {
+    return this.completed;
   }
 
   toggleCompleted() {
