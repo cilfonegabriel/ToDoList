@@ -95,7 +95,6 @@ body {
   padding: 0.3rem 0;
 }
 
-
 .focus {
   background-color: rgb(247, 238, 119);
 }
@@ -107,11 +106,9 @@ body {
   vertical-align: middle;
 }
 
-
 .checkbox {
   height: 12px;
 }
-
 
 .task-description {
   border: none;
