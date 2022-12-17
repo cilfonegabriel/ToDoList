@@ -1,4 +1,3 @@
-// import Task from './modules/Task.js';
 export default class ToDoList {
   constructor(taskList = []) {
     this.taskList = taskList;
@@ -23,22 +22,18 @@ export default class ToDoList {
 
   removeTask(index) {
     this.taskList.splice(index, 1);
+    this.updateTaskIndex();
   }
 
   updateTaskIndex() {
-    this.sortTasks();
+    this.taskList.sort((a, b) => a.index - b.index);
     for (let i = 0; i < this.taskList.length; i += 1) {
-      this.taskList[i].setIndex = i;
+      this.taskList[i].index = i;
     }
   }
 
   removeCompleted() {
-    const len = this.taskList.length;
-    for (let i = len - 1; i >= 0; i -= 1) {
-      if (this.taskList[i].completed) {
-        this.removeTask(i);
-      }
-    }
+    this.taskList = this.taskList.filter((task) => !task.completed);
   }
 
   sortTasks() {
