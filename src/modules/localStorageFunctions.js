@@ -8,16 +8,3 @@ export function save(key, object) {
     }
     return JSON.parse(localStorage.getItem(key));
   }
-
-  /*export function savetask(e) {
-    const task = {
-        title,
-        description,
-        completed: false
-    }
-
-    let tasks = JSON.parse(localStorage.getItem('tasks'));
-    tasks.push(task);
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }
-  e.preventDefault();*/
