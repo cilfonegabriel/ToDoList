@@ -32,7 +32,7 @@ After you're finished please remove all the comments and instructions!
 </div>
 
   <h3><b>To-do list</b></h3>
-> "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. This simple website was build using ES6 and Webpack 
+ "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. This simple website was build using ES6 and Webpack 
 
 </div>
 
